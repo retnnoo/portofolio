@@ -1,0 +1,67 @@
+import React, { useState } from "react";
+import { Download, Menu, X } from "lucide-react";
+
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const navLinks = [
+    { name: "About", href: "#" },
+    { name: "Skills", href: "#" },
+    { name: "Projects", href: "#" },
+    { name: "Experiences", href: "#" },
+    { name: "Contact", href: "#" },
+  ];
+
+  return (
+    <header className="fixed top-0 left-0 w-full z-50 border-b border-white/10 bg-[#020617]/80 backdrop-blur-xl">
+      <nav className="max-w-7xl mx-auto flex items-center justify-between px-5 sm:px-6 lg:px-10 h-[80px]">
+        <a href="#" className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
+          Port<span className="text-cyan-400">folio</span>
+        </a>
+
+        <div className="hidden lg:flex items-center gap-10">
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="relative text-gray-300 text-sm font-medium transition-all duration-300 hover:text-cyan-400 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-cyan-400 after:transition-all after:duration-300 hover:after:w-full">
+              {link.name}
+            </a>
+          ))}
+        </div>
+
+        {/* Desktop Button */}
+        <button className="hidden md:flex items-center gap-2 rounded-xl bg-cyan-400 px-5 py-3 text-sm font-semibold text-[#020617] transition-all duration-300 hover:scale-105 hover:bg-cyan-300 shadow-lg shadow-cyan-500/20">
+          Download CV <Download size={18} />
+        </button>
+
+        {/* Mobile Menu Button */}
+        <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden text-white">
+          {isOpen ? <X size={30} /> : <Menu size={30} />}
+        </button>
+      </nav>
+
+      <div className={`lg:hidden overflow-hidden transition-all duration-300 ${isOpen ? "max-h-[400px]" : "max-h-0"}`}>
+        <div className="border-t border-white/10 bg-[#020617] px-5 py-5">
+          <div className="flex flex-col gap-5">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className="text-base font-medium text-gray-300 transition-colors duration-300 hover:text-cyan-400">
+                {link.name}
+              </a>
+            ))}
+
+            <button className="mt-2 flex items-center justify-center gap-2 rounded-xl bg-cyan-400 py-3 font-semibold text-[#020617] transition-all duration-300 hover:bg-cyan-300">
+              Download CV <Download size={18} />
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Navbar;
