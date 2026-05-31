@@ -14,28 +14,26 @@ const Navbar = () => {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 border-b border-white/10 bg-[#020617]/80 backdrop-blur-xl">
-      <nav className="max-w-7xl mx-auto flex items-center justify-between px-5 sm:px-6 lg:px-10 h-[80px]">
-        <a href="#" className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
+      <nav className="mx-auto flex items-center justify-between px-5 sm:px-6 lg:px-10 2xl:px-20 h-[80px] 2xl:h-[100px]">
+        <a href="#" className="text-2xl sm:text-3xl 2xl:text-5xl font-extrabold tracking-tight text-white">
           Port<span className="text-cyan-400">folio</span>
         </a>
-
-        <div className="hidden lg:flex items-center gap-10">
+        <div className="hidden lg:flex items-center 2xl:gap-15 gap-10">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="relative text-gray-300 text-sm font-medium transition-all duration-300 hover:text-cyan-400 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-cyan-400 after:transition-all after:duration-300 hover:after:w-full">
+              className="relative text-gray-300 text-sm 2xl:text-2xl font-medium transition-all duration-300 hover:text-cyan-400 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-cyan-400 after:transition-all after:duration-300 hover:after:w-full">
               {link.name}
             </a>
           ))}
         </div>
 
-        {/* Desktop Button */}
-        <button className="hidden md:flex items-center gap-2 rounded-xl bg-cyan-400 px-5 py-3 text-sm font-semibold text-[#020617] transition-all duration-300 hover:scale-105 hover:bg-cyan-300 shadow-lg shadow-cyan-500/20">
+        {/* Button */}
+        <button className="hidden md:flex items-center gap-2 rounded-xl bg-cyan-400 px-5 py-3 text-sm 2xl:text-2xl font-semibold text-[#020617] transition-all duration-300 hover:scale-105 hover:bg-cyan-300 shadow-lg shadow-cyan-500/20">
           Download CV <Download size={18} />
         </button>
-
-        {/* Mobile Menu Button */}
+        
         <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden text-white">
           {isOpen ? <X size={30} /> : <Menu size={30} />}
         </button>

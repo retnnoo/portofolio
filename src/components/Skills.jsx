@@ -4,10 +4,10 @@ import { SiReact, SiPython, SiTailwindcss, SiJavascript, SiMysql, SiCanva, SiLar
 
 const Skills = () => {
   return (
-    <section className="w-full lg:py-10 py-8 px-5 md:px-12 lg:px-20">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 md:gap-20 gap-10 items-center">
+    <section className="relative overflow-hidden mt-5">
+      <div className="mx-auto px-5 sm:px-6 lg:px-10 2xl:px-20 grid grid-cols-1 md:grid-cols-2 md:gap-20 gap-10 2xl:gap-40 items-center">
         <div>
-          <h2 className="md:text-5xl text-4xl font-bold leading-tight text-cyan-400">
+          <h2 className="md:text-5xl text-4xl 2xl:text-7xl font-bold leading-tight text-cyan-400">
             Skills and
             <br/>
             Digital Experiences
@@ -15,7 +15,7 @@ const Skills = () => {
 
           {/* TECH STACK */}
           <div className="mt-10">
-            <h3 className="text-2xl font-semibold text-white mb-6">
+            <h3 className="text-2xl 2xl:text-4xl font-semibold text-white mb-6 2xl:mb-10">
               My tech stack
             </h3>
             <div className="grid lg:grid-cols-8 grid-cols-6 gap-4">
@@ -60,7 +60,7 @@ const Skills = () => {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="space-y-5">
+        <div className="space-y-5 lg:space-y-7">
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-full bg-cyan-400 text-black flex items-center justify-center">
               <ChartBar size={24} />
