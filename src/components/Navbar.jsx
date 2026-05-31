@@ -31,7 +31,7 @@ const Navbar = () => {
 
         {/* Button */}
         <button className="hidden md:flex items-center gap-2 rounded-xl bg-cyan-400 px-5 py-3 text-sm 2xl:text-2xl font-semibold text-[#020617] transition-all duration-300 hover:scale-105 hover:bg-cyan-300 shadow-lg shadow-cyan-500/20">
-          Download CV <Download size={18} />
+          Download CV <Download className="w-5 h-5 2xl:w-7 2xl:h-7" />
         </button>
         
         <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden text-white">

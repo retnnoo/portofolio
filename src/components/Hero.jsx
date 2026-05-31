@@ -9,7 +9,7 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-10 items-center w-full">
           <div className="order-2 lg:order-1 text-center lg:text-left">
             <p className="text-white uppercase tracking-[0.3em] text-sm sm:text-base 2xl:text-2xl font-medium mb-5">Hello, I'm</p>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl 2xl:text-8xl font-extrabold leading-tight text-cyan-400">
+            <h1 className="text-4xl md:text-6xl 2xl:text-8xl font-extrabold leading-tight text-cyan-400">
               Retno Wardani
             </h1>
             <h2 className="mt-5 text-xl sm:text-2xl lg:text-3xl 2xl:text-5xl font-semibold text-gray-300">Frontend Developer & Data Enthuaiast</h2>
@@ -40,7 +40,7 @@ const Hero = () => {
             <div className="mt-10 2xl:mt-12 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 2xl:gap-6">
               <button className="group w-full 2xl:text-2xl sm:w-auto px-8 py-4 rounded-xl bg-cyan-400 hover:bg-cyan-300 text-[#020617] font-bold transition-all duration-300 shadow-lg shadow-cyan-500/20 hover:scale-105 flex items-center justify-center gap-2">
                 Hire Me
-                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="group-hover:translate-x-1 transition-transform w-5 h-5 2xl:w-7 2xl:h-7" />
               </button>
               <button className="w-full sm:w-auto 2xl:text-2xl px-8 py-4 rounded-xl border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10 transition-all duration-300">
                 View Projects
