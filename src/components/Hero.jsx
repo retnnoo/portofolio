@@ -8,11 +8,11 @@ const Hero = () => {
       <div className="mx-auto px-5 sm:px-6 lg:px-10 2xl:px-20 min-h-0 flex items-center py-10 lg:py-15 2xl:py-25">
         <div className="grid lg:grid-cols-2 gap-10 items-center w-full">
           <div className="order-2 lg:order-1 text-center lg:text-left">
-            <p className="text-white uppercase tracking-[0.3em] text-sm sm:text-base 2xl:text-2xl font-medium mb-5">Hello, I'm</p>
-            <h1 className="text-4xl md:text-6xl 2xl:text-8xl font-extrabold leading-tight text-cyan-400">
+            <p className="text-white uppercase tracking-[0.3em] text-sm sm:text-base 2xl:text-3xl font-medium mb-5">Hello, I'm</p>
+            <h1 className="text-4xl md:text-6xl 2xl:text-7xl font-extrabold leading-tight text-cyan-400">
               Retno Wardani
             </h1>
-            <h2 className="mt-5 text-xl sm:text-2xl lg:text-3xl 2xl:text-5xl font-semibold text-gray-300">Frontend Developer & Data Enthuaiast</h2>
+            <h2 className="mt-5 text-xl sm:text-2xl lg:text-3xl 2xl:text-4xl font-semibold text-gray-300">Frontend Developer & Data Enthuaiast</h2>
             <p className="mt-6 2xl:mt-10 text-gray-400 text-sm sm:text-base 2xl:text-3xl leading-relaxed max-w-xl lg:max-w-lg 2xl:max-w-4xl mx-auto lg:mx-0">
               Turning data into insights, building responsive web interfaces, and creating clean visual designs are my main interests. 
               I’m an Informatics Engineering graduate from Sriwijaya University focused on data, front-end development, and graphic design, 

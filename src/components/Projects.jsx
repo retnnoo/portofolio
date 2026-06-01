@@ -98,7 +98,7 @@ const filteredProjects =
 
         {/* HEADER */}
         <div>
-          <h2 className="md:text-5xl text-3xl 2xl:text-7xl font-bold leading-tight text-cyan-400">
+          <h2 className="md:text-4xl text-3xl 2xl:text-7xl font-bold leading-tight text-cyan-400">
             My Projects
           </h2>
 
@@ -116,7 +116,7 @@ const filteredProjects =
               className={`
                 px-4 py-2
                 rounded-full
-                text-xs md:text-sm
+                text-xs md:text-sm 2xl:text-2xl
                 font-medium
                 border
                 transition-all
@@ -190,21 +190,12 @@ const filteredProjects =
                 {/* CONTENT */}
                 <div className="2xl:p-5 p-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs md:text-sm 2xl:text-lg font-bold text-[#001f68]">
+                    <span className="text-xs md:text-sm 2xl:text-lg font-bold text-cyan-700">
                       {project.role}
                     </span>
 
                     <span
-                      className="
-                        px-2 py-1
-                        rounded-full
-                        text-[10px]
-                        md:text-xs
-                        font-semibold
-                        bg-cyan-100
-                        text-cyan-800
-                      "
-                    >
+                      className="px-2 py-1 rounded-full text-[10px] md:text-xs font-semibold bg-cyan-100 text-cyan-800">
                       {project.category}
                     </span>
                   </div>

@@ -7,7 +7,7 @@ const Skills = () => {
     <section className="relative overflow-hidden mt-5 mb-5">
       <div className="mx-auto px-8 sm:px-15 lg:px-10 2xl:px-20 grid grid-cols-1 lg:grid-cols-2 lg:gap-20 gap-10 2xl:gap-40 items-center">
         <div>
-          <h2 className="md:text-5xl text-3xl 2xl:text-7xl font-bold leading-tight text-cyan-400">
+          <h2 className="md:text-4xl text-3xl 2xl:text-7xl font-bold leading-tight text-cyan-400">
             Skills and
             <br/>
             Digital Experiences
