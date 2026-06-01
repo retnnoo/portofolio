@@ -75,11 +75,11 @@ const Experiences = () => {
   };
 
   return (
-    <section className="relative overflow-hidden mt-10">
+    <section className="relative overflow-hidden mt-3 md:mt-10">
       <div className="mx-auto px-8 sm:px-15 lg:px-10 2xl:px-20 mt-10">
         {/* HEADER */}
         <div>
-          <h2 className="md:text-5xl text-3xl 2xl:text-7xl font-bold text-cyan-400">
+          <h2 className="md:text-4xl text-3xl 2xl:text-7xl font-bold text-cyan-400">
             My Experience
           </h2>
 
