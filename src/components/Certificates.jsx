@@ -37,9 +37,7 @@ const Certificates = () => {
   const getScrollAmount = () => {
     const card =
       sliderRef.current?.querySelector(".certificate-card");
-
     if (!card) return 350;
-
     return card.offsetWidth + 16;
   };
 
@@ -64,7 +62,7 @@ const Certificates = () => {
         {/* HEADER */}
         <div>
           <p className="md:text-5xl text-3xl 2xl:text-7xl font-bold text-cyan-400">Certificates</p>
-          <p className="mt-5 text-sm md:text-lg 2xl:text-3xl text-white max-w-2xl 2xl:max-w-4xl">
+          <p className="mt-5 2xl:py-5 text-sm md:text-lg 2xl:text-3xl text-white max-w-2xl 2xl:max-w-4xl leading-relaxed">
             Certifications and courses that support my skills
             in software development, data science, and
             machine learning.
@@ -143,20 +141,20 @@ const Certificates = () => {
                   md:max-w-[355px]
                   2xl:max-w-[470px]
 
-                  bg-white border-2 border-cyan-400 rounded-3xl p-5 flex-shrink-0 hover:-translate-y-2 transition-allduration-500
+                  bg-white border-2 border-cyan-400 rounded-3xl p-5 shrink-0 hover:-translate-y-2 transition-allduration-500
                 "
               >
-                <div className="md:w-14 md:h-14 w-12 h-12 rounded-2xl bg-cyan-400 flex items-center justify-center">
-                  <Award size={28} />
+                <div className="md:w-12 md:h-12 2xl:w-1/6 2xl:h-1/4  w-10 h-10 rounded-2xl bg-cyan-400 flex items-center justify-center">
+                  <Award className="2xl:w-14 xl:h-14 md:w-9 md:h-9 w-7 h-7" />
                 </div>
 
                 {/* CONTENT */}
-                <p className="mt-4mtext-black font-bold text-sm md:text-lg 2xl:text-xl">{cert.title}</p>
-                <p className="mt-2 text-cyan-700 font-semibold text-sm md:text-base">{cert.issuer}</p>
-                <p className="text-gray-500 text-sm mt-1">Issued {cert.year}</p>
-                <div className="mt-5 flex items-center gap-2 text-sm font-semibold text-black">
+                <p className="mt-2 2xl:mt-4 text-black font-bold text-sm md:text-lg 2xl:text-3xl">{cert.title}</p>
+                <p className="mt-2 2xl:mt-4 text-cyan-700 font-semibold text-sm md:text-base 2xl:text-2xl">{cert.issuer}</p>
+                <p className="text-gray-500 text-sm 2xl:text-xl 2xl:mt-1">Issued {cert.year}</p>
+                <div className="mt-5 2xl:mb-5 flex items-center gap-2 text-sm 2xl:text-2xl font-semibold text-black">
                   View Certificate
-                  <ArrowUpRight size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition"/>
+                  <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition 2xl:w-7 xl:h-7 w-5 h-5"/>
                 </div>
               </a>
             ))}

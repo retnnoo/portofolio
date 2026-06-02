@@ -31,15 +31,15 @@ const Contact = () => {
       <div className="mx-auto px-8 sm:px-15 lg:px-10 2xl:px-20">
         {/* HEADER */}
         <div className="max-w-3xl">
-          <span className="text-cyan-400 font-medium tracking-wide">
+          <span className="text-cyan-400 font-medium 2xl:text-2xl tracking-wide">
             GET IN TOUCH
           </span>
 
-          <h2 className="mt-3 text-4xl md:text-6xl font-bold text-white">
+          <h2 className="mt-3 md:text-4xl text-3xl 2xl:text-7xl font-bold text-white">
             Let's Work Together
           </h2>
 
-          <p className="mt-5 text-gray-400 text-lg leading-relaxed">
+          <p className="mt-5 text-sm md:text-lg 2xl:text-3xl text-white leading-relaxed">
             Whether you have a project idea, internship opportunity,
             freelance work, or simply want to connect, I'd love to
             hear from you.
@@ -54,30 +54,9 @@ const Contact = () => {
               href={contact.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="
-                group
-                relative
-                overflow-hidden
-
-                bg-white/5
-                backdrop-blur-md
-
-                border
-                border-white/10
-
-                rounded-3xl
-                p-6
-
-                flex
-                items-center
-                justify-between
-
-                transition-all
-                duration-300
-
-                hover:-translate-y-2
-                hover:border-cyan-400/50
-                hover:shadow-[0_0_40px_rgba(34,211,238,0.15)]
+              className="group relative overflow-hidden bg-white/5 backdrop-blur-md border border-white/10
+                         rounded-3xl p-6 flex items-center justify-between transition-all duration-300
+                         hover:-translate-y-2 hover:border-cyan-400/50 hover:shadow-[0_0_40px_rgba(34,211,238,0.15)]
               "
             >
               <div className="flex items-center">
@@ -87,7 +66,6 @@ const Contact = () => {
                     w-14 h-14
                     2xl:w-20 2xl:h-20
                     rounded-2xl
-
                     bg-cyan-400/10
                     border
                     border-cyan-400/20
@@ -97,7 +75,6 @@ const Contact = () => {
                     justify-center
 
                     text-cyan-400
-
                     transition-all
                     duration-300
 
@@ -120,77 +97,29 @@ const Contact = () => {
               </div>
 
               {/* ARROW */}
-              <ArrowUpRight
-                size={22}
-                className="
-                  text-cyan-400
-
-                  transition-all
-                  duration-300
-
-                  group-hover:translate-x-1
-                  group-hover:-translate-y-1
-                "
+              <ArrowUpRight size={22} 
+              className="text-cyan-400 transition-all duration-300 group-hover:translate-x-1 group-hover:translate-y-1"
               />
             </a>
           ))}
         </div>
 
         {/* CTA BOX */}
-        <div
-          className="
-            mt-16
-
-            rounded-[32px]
-
-            border
-            border-cyan-400/20
-
-            bg-gradient-to-r
-            from-cyan-500/10
-            via-cyan-500/5
-            to-transparent
-
-            p-8 md:p-12
-          "
-        >
-          <h3 className="text-3xl md:text-5xl font-bold text-white">
+        <div className="mt-16 rounded-[32px] border border-cyan-400/20 bg-gradient-to-r from-cyan-500/10 via-cyan-500/5 to-transparent p-8 md:p-12">
+          <h3 className="text-2xl md:text-4xl 2xl:text-6xl font-bold text-white">
             Ready to build something amazing?
           </h3>
 
-          <p className="mt-4 text-gray-400 max-w-2xl">
+          <p className="mt-4 text-gray-400 max-w-2xl 2xl:text-2xl 2xl:max-w-7xl ">
             I'm currently open to internship opportunities,
             freelance projects, and collaborations. Feel free
             to reach out if you'd like to work together.
           </p>
 
-          <a
-            href="mailto:retnowardani024@gmail.com"
-            className="
-              inline-flex
-              items-center
-              gap-2
-
-              mt-8
-
-              px-6
-              py-3
-
-              rounded-xl
-
-              bg-cyan-400
-              text-black
-
-              font-semibold
-
-              transition-all
-              duration-300
-
-              hover:scale-105
-            "
-          >
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=retnowardani024@gmail.com"
+            className="inline-flex items-center gap-2 mt-5 2xl:mt-7 px-6 py-3 2xl:py-5 rounded-xl bg-cyan-400 text-black 2xl:text-2xl font-semibold transition-all duration-300 hover:scale-105">
             Say Hello
-            <ArrowUpRight size={18} />
+            <ArrowUpRight className="2xl:w-8 2xl:h-8 w-4 h-4" />
           </a>
         </div>
 

@@ -98,11 +98,11 @@ const filteredProjects =
 
         {/* HEADER */}
         <div>
-          <h2 className="md:text-4xl text-3xl 2xl:text-7xl font-bold leading-tight text-cyan-400">
+          <p className="md:text-4xl text-3xl 2xl:text-7xl font-bold leading-tight text-cyan-400">
             My Projects
-          </h2>
+          </p>
 
-          <p className="mt-5 2xl:py-5 text-sm md:text-lg 2xl:text-3xl text-white max-w-2xl 2xl:max-w-4xl">
+          <p className="mt-5 2xl:py-5 text-sm md:text-lg 2xl:text-3xl text-white max-w-2xl 2xl:max-w-4xl leading-relaxed">
             Some projects that I have worked on in machine
             learning, data science, and front-end development.
           </p>
@@ -175,7 +175,8 @@ const filteredProjects =
                   md:max-w-[355px]
                   2xl:max-w-[470px]
 
-                  bg-white border-2 border-cyan-400 rounded-3xl overflow-hidden flex-shrink-0 hover:-translate-y-2 transition-all duration-500
+                  bg-white border-2 border-cyan-400 rounded-3xl relative overflow-hidden shrink-0 hover:-translate-y-2 transition-all duration-500
+                    hover:shadow-[0_0_40px_rgba(34,211,238,0.15)]
                 "
               >
                 {/* IMAGE */}
