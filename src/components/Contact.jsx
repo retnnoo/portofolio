@@ -77,7 +77,7 @@ const Contact = () => {
                     text-cyan-400
                     transition-all
                     duration-300
-
+                    
                     group-hover:bg-cyan-400
                     group-hover:text-black
                     group-hover:scale-110

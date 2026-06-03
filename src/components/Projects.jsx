@@ -3,6 +3,8 @@ import {ArrowUpRight, ChevronLeft, ChevronRight,} from "lucide-react";
 
 import sipindang from "../assets/img/sipindang.png";
 import SelulerKu from "../assets/img/SelulerKu.png";
+import Sp2d from "../assets/img/sp2d.jpeg";
+import Tpp from "../assets/img/tpp.jpeg";
 
 const projects = [
   {
@@ -10,7 +12,7 @@ const projects = [
     category: "Web Development",
     role: "Front-End",
     description:
-      "Membantu pengelolaan data aset daerah melalui proses pendataan, inventarisasi, dan pelaporan secara terstruktur dan terintegrasi.",
+      "Facilitates the management of regional asset data through structured and integrated asset registration and reporting processes, ensuring better accuracy and efficiency in asset administration.",
     tech: ["Laravel", "Javascript", "Bootstrap"],
     image: sipindang,
     link: "https://sipindang.palembang.go.id/login",
@@ -21,34 +23,43 @@ const projects = [
     category: "Web Development",
     role: "Front-End",
     description:
-      "Membantu menentukan operator seluler terbaik dengan rekomendasi berbasis metode pengambilan keputusan yang cepat dan akurat.",
+      "Assists users in selecting the best mobile network operator by providing fast and accurate recommendations based on a decision-support method.",
     tech: ["Laravel", "Tailwind", "Javascript"],
     image: SelulerKu,
-    link: "#",
+    link: "https://selulerku-dss-swara-copras-laravel.vercel.app/",
   },
 
   {
-    title: "Klasifikasi PCOS Menggunakan TabNet",
-    category: "Machine Learning",
-    role: "Data Science",
+    title: "Sistem Informasi Manajemen SP2D Kota Palembang",
+    category: "Web Development",
+    role: "Front-End",
     description:
-      "Model klasifikasi PCOS menggunakan TabNet dan Explainable AI.",
-    tech: ["Python", "TabNet", "SHAP"],
-    image:
-      "https://images.unsplash.com/photo-1555949963-aa79dcee981c",
-    link: "#",
+      "Facilitates the SP2D process from submission to issuance through an integrated system that supports verification, approval, tracking, and efficient data management to ensure accuracy and transparency.",
+    tech: ["Laravel", "Tailwind", "Javascript"],
+    image:Sp2d,
+    link: "https://spmonline.palembang.go.id/",
   },
 
   {
-    title: "Mobile Banking UI Design",
-    category: "UI/UX or Design",
-    role: "UI Designer",
+    title: "Sistem Informasi TPP Kota Palembang",
+    category: "Web Development",
+    role: "Front-End",
     description:
-      "Desain antarmuka aplikasi mobile banking menggunakan Figma.",
-    tech: ["Figma", "UI Design"],
-    image:
-      "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e",
-    link: "#",
+      "The TPP Information System of Palembang City is a system designed to manage Employee Additional Income (TPP) data in an integrated way, from calculation to reporting, to improve efficiency, accuracy, and transparency in TPP management",
+    tech: ["Laravel", "Javascript", "Bootstrap"],
+    image:Tpp,
+    link: "https://sistem-informasi-tpp.vercel.app/",
+  },
+
+  {
+    title: "Sistem Informasi TPP Kota Palembang",
+    category: "Web Development",
+    role: "Front-End",
+    description:
+      "The TPP Information System of Palembang City is a system designed to manage Employee Additional Income (TPP) data in an integrated way, from calculation to reporting, to improve efficiency, accuracy, and transparency in TPP management",
+    tech: ["Laravel", "Javascript", "Bootstrap"],
+    image:Tpp,
+    link: "https://sistem-informasi-tpp.vercel.app/",
   },
 ];
 
@@ -175,8 +186,8 @@ const filteredProjects =
                   md:max-w-[355px]
                   2xl:max-w-[470px]
 
-                  bg-white border-2 border-cyan-400 rounded-3xl relative overflow-hidden shrink-0 hover:-translate-y-2 transition-all duration-500
-                    hover:shadow-[0_0_40px_rgba(34,211,238,0.15)]
+                  overflow-hidden bg-white/5 backdrop-blur-md border border-white/20 rounded-3xl transition-all duration-300
+                  hover:-translate-y-2 hover:border-cyan-400/50 hover:shadow-[0_0_40px_rgba(34,211,238,0.15)]
                 "
               >
                 {/* IMAGE */}
@@ -191,7 +202,7 @@ const filteredProjects =
                 {/* CONTENT */}
                 <div className="2xl:p-5 p-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs md:text-sm 2xl:text-lg font-bold text-cyan-700">
+                    <span className="text-xs md:text-sm 2xl:text-lg font-bold text-cyan-400">
                       {project.role}
                     </span>
 
@@ -201,11 +212,11 @@ const filteredProjects =
                     </span>
                   </div>
 
-                  <h3 className="text-xs md:text-base 2xl:text-xl font-bold text-black mt-2 2xl:mt-3 leading-snug">
+                  <h3 className="text-xs md:text-base 2xl:text-xl font-bold text-white mt-2 2xl:mt-3 leading-snug">
                     {project.title}
                   </h3>
 
-                  <p className="text-gray-600 text-xs md:text-sm 2xl:text-xl mt-2 2xl:mt-3 leading-relaxed">
+                  <p className="text-gray-400 text-xs md:text-sm 2xl:text-xl mt-2 2xl:mt-3 leading-relaxed">
                     {project.description}
                   </p>
 
@@ -217,7 +228,7 @@ const filteredProjects =
                     ))}
                   </div>
 
-                  <div className="md:mt-5 mt-3 mb-2 2xl:mt-7 flex items-center gap-2 text-xs md:text-sm 2xl:text-lg font-semibold text-black">
+                  <div className="md:mt-5 mt-3 mb-2 2xl:mt-7 flex items-center gap-2 text-xs md:text-sm 2xl:text-lg font-semibold text-white">
                     View Project
                     <ArrowUpRight size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition"/>
                   </div>

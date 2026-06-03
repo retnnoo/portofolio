@@ -127,7 +127,8 @@ const Experiences = () => {
                 md:max-w-[355px]
                 2xl:max-w-[470px]
 
-                bg-white border-2 border-cyan-400 rounded-3xl overflow-hidden flex-shrink-0 hover:-translate-y-2 transition-all duration-500"
+                  overflow-hidden bg-white/5 backdrop-blur-md border border-white/20 rounded-3xl transition-all duration-300
+                  hover:-translate-y-2 hover:border-cyan-400/50 hover:shadow-[0_0_40px_rgba(34,211,238,0.15)]"
               >
                 {/* IMAGE */}
                 <div className="overflow-hidden">
@@ -140,19 +141,19 @@ const Experiences = () => {
 
                 {/* CONTENT */}
                 <div className="p-4">
-                  <p className="text-xs md:text-sm 2xl:text-lg font-bold text-cyan-700">
+                  <p className="text-xs md:text-sm 2xl:text-lg font-bold text-cyan-400">
                     {exp.company}
                   </p>
 
-                  <h3 className="text-xs md:text-base 2xl:text-xl font-bold text-black mt-2">
+                  <h3 className="text-xs md:text-base 2xl:text-xl font-bold text-white mt-2">
                     {exp.position}
                   </h3>
 
-                  <p className="text-gray-500 text-sm 2xl:text-lg mt-1">
+                  <p className="text-gray-300 text-sm 2xl:text-lg mt-1">
                     {exp.period}
                   </p>
 
-                  <p className="text-gray-600 text-xs md:text-sm 2xl:text-xl mt-2 leading-relaxed">
+                  <p className="text-gray-300 text-xs md:text-sm 2xl:text-xl mt-2 leading-relaxed">
                     {exp.description}
                   </p>
 

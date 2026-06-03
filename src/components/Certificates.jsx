@@ -3,31 +3,37 @@ import {ChevronLeft,ChevronRight,ArrowUpRight,Award,} from "lucide-react";
 
 const certificates = [
   {
-    title: "Belajar Machine Learning",
-    issuer: "Dicoding Indonesia",
+    title: "Intro to Data Analytics",
+    issuer: "RevoU",
+    year: "2026",
+    link: "https://drive.google.com/file/d/1oOGfccqWCFWP-g5nPaTFZB7SiKu3NAF7/view",
+  },
+
+  {
+    title: "Data Analysis",
+    issuer: "MySkill",
+    year: "2026",
+    link: "https://storage.googleapis.com/myskill-v2-certificates/topic-qtKMZ78xyd6TPzUQOESu/5cyl2FSxsmNQ67dJAXEh0309LyE3-3tD4fYCcToOVDF7gYp3X.pdf",
+  },
+
+  {
+    title: "Data Science",
+    issuer: "MySkill",
+    year: "2026",
+    link: "https://storage.googleapis.com/myskill-v2-certificates/topic-4TAQx7X8U6vFPkMvU9L6/5cyl2FSxsmNQ67dJAXEh0309LyE3-jStnZJP0eGuldZeBWFpS.pdf",
+  },
+
+  {
+    title: "Content Creator (Digital Marketing)",
+    issuer: "Badan Nasional Sertifikasi Profesi (BNSP)",
     year: "2025",
-    link: "https://drive.google.com/",
+    link: "https://drive.google.com/drive/folders/1gZHnaY7rDYz0m4VHS_mbZJnhsWPdWl4T",
   },
-
   {
-    title: "Belajar Dasar Data Science",
-    issuer: "Dicoding Indonesia",
-    year: "2025",
-    link: "https://drive.google.com/",
-  },
-
-  {
-    title: "Responsive Web Design",
-    issuer: "freeCodeCamp",
-    year: "2024",
-    link: "https://drive.google.com/",
-  },
-
-  {
-    title: "Python for Data Science",
-    issuer: "IBM",
-    year: "2024",
-    link: "https://drive.google.com/",
+    title: "Computer and Network Engineering",
+    issuer: "Badan Nasional Sertifikasi Profesi (BNSP)",
+    year: "2022",
+    link: "http://drive.google.com/drive/folders/1gCa3-qY5IV0L4Qk9CJbvCmBnjTNlQ89N",
   },
 ];
 
@@ -141,18 +147,20 @@ const Certificates = () => {
                   md:max-w-[355px]
                   2xl:max-w-[470px]
 
-                  bg-white border-2 border-cyan-400 rounded-3xl p-5 shrink-0 hover:-translate-y-2 transition-allduration-500
+                  overflow-hidden bg-white/5 backdrop-blur-md border p-5 border-white/20 rounded-3xl transition-all duration-300
+                  hover:-translate-y-2 hover:border-cyan-400/50 hover:shadow-[0_0_40px_rgba(34,211,238,0.15)]
                 "
               >
-                <div className="md:w-12 md:h-12 2xl:w-1/6 2xl:h-1/4  w-10 h-10 rounded-2xl bg-cyan-400 flex items-center justify-center">
+                <div className="md:w-12 md:h-12 2xl:w-1/6 2xl:h-1/4  w-10 h-10 rounded-2xl flex items-center justify-center
+                                 text-black transition-all duration-300 bg-cyan-400 border border-cyan-400/20 group-hover:scale-110">
                   <Award className="2xl:w-14 xl:h-14 md:w-9 md:h-9 w-7 h-7" />
                 </div>
 
                 {/* CONTENT */}
-                <p className="mt-2 2xl:mt-4 text-black font-bold text-sm md:text-lg 2xl:text-3xl">{cert.title}</p>
-                <p className="mt-2 2xl:mt-4 text-cyan-700 font-semibold text-sm md:text-base 2xl:text-2xl">{cert.issuer}</p>
-                <p className="text-gray-500 text-sm 2xl:text-xl 2xl:mt-1">Issued {cert.year}</p>
-                <div className="mt-5 2xl:mb-5 flex items-center gap-2 text-sm 2xl:text-2xl font-semibold text-black">
+                <p className="mt-2 2xl:mt-4 text-white font-bold text-sm md:text-lg 2xl:text-3xl">{cert.title}</p>
+                <p className="mt-2 2xl:mt-4 text-cyan-400 font-semibold text-sm md:text-base 2xl:text-2xl">{cert.issuer}</p>
+                <p className="text-gray-300 text-sm 2xl:text-xl 2xl:mt-1">Issued {cert.year}</p>
+                <div className="mt-5 2xl:mb-5 flex items-center gap-2 text-sm 2xl:text-2xl font-semibold text-white">
                   View Certificate
                   <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition 2xl:w-7 xl:h-7 w-5 h-5"/>
                 </div>
