@@ -5,6 +5,11 @@ import sipindang from "../assets/img/sipindang.png";
 import SelulerKu from "../assets/img/SelulerKu.png";
 import Sp2d from "../assets/img/sp2d.jpeg";
 import Tpp from "../assets/img/tpp.jpeg";
+import Resnet from "../assets/img/resnet.png";
+import Apriori from "../assets/img/apriori.png";
+import XGboost from "../assets/img/XGBoost.png";
+import Movie from "../assets/img/movie.png";
+import Market1 from "../assets/img/market1.jpeg";
 
 const projects = [
   {
@@ -52,14 +57,58 @@ const projects = [
   },
 
   {
-    title: "Sistem Informasi TPP Kota Palembang",
-    category: "Web Development",
-    role: "Front-End",
+    title: "Real vs AI-Generated Image Classification Using ResNet101",
+    category: "Artificial Intelligence",
+    role: "Deep Learning Engineer",
     description:
-      "The TPP Information System of Palembang City is a system designed to manage Employee Additional Income (TPP) data in an integrated way, from calculation to reporting, to improve efficiency, accuracy, and transparency in TPP management",
-    tech: ["Laravel", "Javascript", "Bootstrap"],
-    image:Tpp,
-    link: "https://sistem-informasi-tpp.vercel.app/",
+      "A ResNet101-based image classification system for distinguishing real and AI-generated (fake) images by analyzing visual characteristics to support content authenticity detection.",
+    tech: ["ResNet101", "Python", "Tensorflow"],
+    image:Resnet,
+    link: "https://github.com/retnnoo/ResNet101_CIFAKE_Classification",
+  },
+
+  {
+    title: "Recommendation System Based on Association Rules",
+    category: "Artificial Intelligence",
+    role: "Data  Mining Engineer",
+    description:
+      "A recipe recommendation system using the Apriori algorithm to find patterns among ingredients, which are used to recommend recipes based on country and available ingredients.",
+    tech: ["Apriori Algorithm", "Python", "Streamlit"],
+    image:Apriori,
+    link: "https://github.com/retnnoo/Recommendation-System-Based-on-Association-Rules",
+  },
+
+  {
+    title: "Smart Sales Channel Prediction: Multi-Class Classification with XGBoost",
+    category: "Artificial Intelligence",
+    role: "Data Scientist",
+    description:
+      "A multi-class classification system using XGBoost to predict customer shopping channel preferences (online, offline, or hybrid) based on demographic and behavioral data.",
+    tech: ["XGBoost", "Python", "Scikit-Learn"],
+    image:XGboost,
+    link: "https://github.com/retnnoo/Sales-Channel-Classification-using-XGBoost",
+  },
+
+  {
+    title: "Movie Rating Classification",
+    category: "Artificial Intelligence",
+    role: "Data Analyst",
+    description:
+      "A machine learning system for predicting movie rating categories based on metadata such as budget, popularity, runtime, genre, and release year to support movie quality analysis.",
+    tech: ["Decision Tree", "Random Forest", "XGBoost", "Python", "Scikit-Learn"],
+    image:Movie,
+    link: "https://github.com/retnnoo/Movie-Rating-Classification-with-Machine-Learning",
+  },
+
+  {
+    title: "Marketing Customer Analysis Dashboard",
+    category: "Artificial Intelligence",
+    role: "Data Analyst",
+    description:
+      "A customer data analysis dashboard to understand segmentation and purchasing behavior based on demographics, geography, and registration time using Excel pivot tables and visualizations.",
+    tech: ["Microsoft Excel", "Pivot Table"],
+    image:Market1,
+    link: "https://github.com/retnnoo/marketing-customer-analysis-dashboard",
   },
 ];
 
@@ -69,7 +118,7 @@ const Projects = () => {
   const categories = [
     "All",
     "Web Development",
-    "Machine Learning",
+    "Artificial Intelligence",
     "UI/UX or Design",
   ];
 
