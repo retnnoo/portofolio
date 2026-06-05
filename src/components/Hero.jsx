@@ -4,7 +4,7 @@ import ProfilePic from "../assets/img/pp.png";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden">
+    <section id="hero" className="relative overflow-hidden">
       <div className="mx-auto px-5 sm:px-6 lg:px-10 2xl:px-20 min-h-0 flex items-center py-10 lg:py-15 2xl:py-25">
         <div className="grid lg:grid-cols-2 gap-10 items-center w-full">
           <div className="order-2 lg:order-1 text-center lg:text-left">

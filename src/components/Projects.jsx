@@ -10,6 +10,9 @@ import Apriori from "../assets/img/apriori.png";
 import XGboost from "../assets/img/XGBoost.png";
 import Movie from "../assets/img/movie.png";
 import Market1 from "../assets/img/market1.jpeg";
+import Gegas from "../assets/img/gegas.png";
+import UIsipindang from "../assets/img/ui-sipindang.png";
+import Gesign from "../assets/img/Project-Design.png";
 
 const projects = [
   {
@@ -110,6 +113,39 @@ const projects = [
     image:Market1,
     link: "https://github.com/retnnoo/marketing-customer-analysis-dashboard",
   },
+
+  {
+    title: "GEGAS Website UI Design",
+    category: "UI & Graphic Design",
+    role: "UI Designer",
+    description:
+      "A website UI design for GEGAS, a platform that supports MSME development in South Sumatra and provides legal services for business owners. The design includes login, registration, home, and legal services pages.",
+    tech: ["Figma", "Canva"],
+    image:Gegas,
+    link: "https://www.figma.com/design/rMlB2GKXMHoeGFN7iH7mGI/BASEMAH-MART?node-id=0-1&p=f",
+  },
+
+  {
+    title: "SIPINDANG Website UI Design",
+    category: "UI & Graphic Design",
+    role: "UI Designer",
+    description:
+      "A user interface design for Sistem Informasi Aset dan Barang Milik Daerah Kota Palembang, including login, home, KIB data, coordinate data, archive, and user management pages to support efficient regional asset management.",
+    tech: ["Figma", "Canva"],
+    image:UIsipindang,
+    link: "https://www.figma.com/design/czGDipIsWXZIPMWzgxvsxH/Untitled?node-id=329-2&t=gxuB7xHEwqafPcmC-1",
+  },
+
+  {
+    title: "Graphic Design Collection",
+    category: "UI & Graphic Design",
+    role: "Graphic Designer",
+    description:
+      "A collection of graphic design works including posters, flyers, and Instagram feed content used for promotional and visual communication purposes, focusing on delivering messages that are attractive, informative, and easy to understand.",
+    tech: ["Figma", "Canva"],
+    image:Gesign,
+    link: "https://canva.link/x4vrduc9373kv5u",
+  },
 ];
 
 const Projects = () => {
@@ -119,7 +155,7 @@ const Projects = () => {
     "All",
     "Web Development",
     "Artificial Intelligence",
-    "UI/UX or Design",
+    "UI & Graphic Design",
   ];
 
 const filteredProjects =
@@ -153,7 +189,7 @@ const filteredProjects =
   };
 
   return (
-    <section className="relative overflow-hidden">
+    <section id="project" className="relative overflow-hidden">
       <div className="mx-auto px-8 sm:px-15 lg:px-10 2xl:px-20 mt-10">
 
         {/* HEADER */}

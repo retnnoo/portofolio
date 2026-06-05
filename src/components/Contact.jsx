@@ -116,11 +116,19 @@ const Contact = () => {
             to reach out if you'd like to work together.
           </p>
 
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=retnowardani024@gmail.com"
-            className="inline-flex items-center gap-2 mt-5 2xl:mt-7 px-6 py-3 2xl:py-5 rounded-xl bg-cyan-400 text-black 2xl:text-2xl font-semibold transition-all duration-300 hover:scale-105">
+          <button
+            onClick={() =>
+              window.open(
+                "https://mail.google.com/mail/?view=cm&fs=1&to=retnowardani024@gmail.com",
+                "_blank",
+                "noopener,noreferrer"
+              )
+            }
+            className="inline-flex items-center gap-2 mt-5 2xl:mt-7 px-6 py-3 2xl:py-5 rounded-xl bg-cyan-400 text-black 2xl:text-2xl font-semibold transition-all duration-300 hover:scale-105"
+          >
             Say Hello
             <ArrowUpRight className="2xl:w-8 2xl:h-8 w-4 h-4" />
-          </a>
+          </button>
         </div>
 
         {/* FOOTER */}

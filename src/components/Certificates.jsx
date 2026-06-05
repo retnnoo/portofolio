@@ -62,7 +62,7 @@ const Certificates = () => {
   };
 
   return (
-    <section className="relative overflow-hidden mt-20">
+    <section id="certificate" className="relative overflow-hidden mt-20">
       <div className="mx-auto px-8 sm:px-15 lg:px-10 2xl:px-20">
 
         {/* HEADER */}
