@@ -141,26 +141,26 @@ const Certificates = () => {
 
                   min-w-[248px]
                   md:min-w-[355px]
-                  2xl:min-w-[470px]
+                  2xl:min-w-[530px]
 
                   max-w-[248px]
                   md:max-w-[355px]
-                  2xl:max-w-[470px]
+                  2xl:max-w-[530px]
 
-                  overflow-hidden bg-white/5 backdrop-blur-md border p-5 border-white/20 rounded-3xl transition-all duration-300
+                  overflow-hidden bg-white/5 backdrop-blur-md border p-5 2xl:p-10 border-white/20 rounded-3xl transition-all duration-300
                   hover:-translate-y-2 hover:border-cyan-400/50 hover:shadow-[0_0_40px_rgba(34,211,238,0.15)]
                 "
               >
-                <div className="md:w-12 md:h-12 2xl:w-1/6 2xl:h-1/4  w-10 h-10 rounded-2xl flex items-center justify-center
+                <div className="md:w-12 md:h-12 2xl:w-2/10 2xl:h-2/9  w-10 h-10 rounded-2xl flex items-center justify-center
                                  text-black transition-all duration-300 bg-cyan-400 border border-cyan-400/20 group-hover:scale-110">
-                  <Award className="2xl:w-14 xl:h-14 md:w-9 md:h-9 w-7 h-7" />
+                  <Award className="2xl:w-13 xl:h-13 md:w-9 md:h-9 w-7 h-7" />
                 </div>
 
                 {/* CONTENT */}
-                <p className="mt-2 2xl:mt-4 text-white font-bold text-sm md:text-lg 2xl:text-3xl">{cert.title}</p>
-                <p className="mt-2 2xl:mt-4 text-cyan-400 font-semibold text-sm md:text-base 2xl:text-2xl">{cert.issuer}</p>
-                <p className="text-gray-300 text-sm 2xl:text-xl 2xl:mt-1">Issued {cert.year}</p>
-                <div className="mt-5 2xl:mb-5 flex items-center gap-2 text-sm 2xl:text-2xl font-semibold text-white">
+                <p className="mt-2 2xl:mt-4 text-white font-bold text-sm md:text-lg 2xl:text-4xl">{cert.title}</p>
+                <p className="mt-2 2xl:mt-4 text-cyan-400 font-semibold text-sm md:text-base 2xl:text-3xl">{cert.issuer}</p>
+                <p className="text-gray-300 text-sm 2xl:text-2xl 2xl:mt-1">Issued {cert.year}</p>
+                <div className="mt-5 flex items-center gap-2 text-sm 2xl:text-2xl font-semibold text-white">
                   View Certificate
                   <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition 2xl:w-7 xl:h-7 w-5 h-5"/>
                 </div>

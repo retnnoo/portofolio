@@ -1,18 +1,33 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import ProfilePic from "../assets/img/pp.png";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section id="hero" className="relative overflow-hidden">
-      <div className="mx-auto px-5 sm:px-6 lg:px-10 2xl:px-20 min-h-0 flex items-center py-10 lg:py-15 2xl:py-25">
+    <motion.section id="hero" className="relative overflow-hidden" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
+      <motion.div 
+        className="mx-auto px-5 sm:px-6 lg:px-10 2xl:px-20 min-h-0 flex items-center py-10 lg:py-15 2xl:py-25"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}>
+
         <div className="grid lg:grid-cols-2 gap-10 items-center w-full">
           <div className="order-2 lg:order-1 text-center lg:text-left">
-            <p className="text-white uppercase tracking-[0.3em] text-sm sm:text-base 2xl:text-3xl font-medium mb-5">Hello, I'm</p>
-            <h1 className="text-4xl md:text-6xl 2xl:text-7xl font-extrabold leading-tight text-cyan-400">
+            <motion.p 
+              className="text-white uppercase tracking-[0.3em] text-sm sm:text-base 2xl:text-3xl font-medium mb-5"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}>
+              Hello, I'm</motion.p>
+
+            <motion.p  initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-4xl md:text-6xl 2xl:text-7xl font-extrabold leading-tight text-cyan-400">
               Retno Wardani
-            </h1>
-            <h2 className="mt-5 text-xl sm:text-2xl lg:text-3xl 2xl:text-4xl font-semibold text-gray-300">Frontend Developer & Data Enthuaiast</h2>
+            </motion.p>
+            <p className="mt-5 text-xl sm:text-2xl lg:text-3xl 2xl:text-4xl font-semibold text-gray-300">Frontend Developer & Data Enthuaiast</p>
             <p className="mt-6 2xl:mt-10 text-gray-400 text-sm sm:text-base 2xl:text-3xl leading-relaxed max-w-xl lg:max-w-lg 2xl:max-w-4xl mx-auto lg:mx-0">
               Turning data into insights, building responsive web interfaces, and creating clean visual designs are my main interests. 
               I’m an Informatics Engineering graduate from Sriwijaya University focused on data, front-end development, and graphic design, 
@@ -38,11 +53,32 @@ const Hero = () => {
             </div>
 
             <div className="mt-10 2xl:mt-12 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 2xl:gap-6">
-              <button className="group w-full 2xl:text-2xl sm:w-auto px-8 py-4 rounded-xl bg-cyan-400 hover:bg-cyan-300 text-[#020617] font-bold transition-all duration-300 shadow-lg shadow-cyan-500/20 hover:scale-105 flex items-center justify-center gap-2">
+              <button 
+                onClick={() =>
+                  window.open(
+                    "https://mail.google.com/mail/?view=cm&fs=1&to=retnowardani024@gmail.com",
+                    "_blank",
+                    "noopener,noreferrer"
+                  )
+                }
+                className="group w-full 2xl:text-2xl sm:w-auto px-8 py-4 rounded-xl bg-cyan-400 hover:bg-cyan-300 text-[#020617] font-bold transition-all duration-300 shadow-lg shadow-cyan-500/20 hover:scale-105 flex items-center justify-center gap-2">
                 Hire Me
                 <ArrowRight className="group-hover:translate-x-1 transition-transform w-5 h-5 2xl:w-7 2xl:h-7" />
               </button>
-              <button className="w-full sm:w-auto 2xl:text-2xl px-8 py-4 rounded-xl border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10 transition-all duration-300">
+
+              <button
+                onClick={() => {
+                  const target = document.getElementById("project");
+
+                  if (target && window.lenis) {
+                    window.lenis.scrollTo(target, {
+                      duration: 1.5,
+                      offset: -80,
+                    });
+                  }
+                }}
+                className="w-full sm:w-auto 2xl:text-2xl px-8 py-4 rounded-xl border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10 transition-all duration-300"
+              >
                 View Projects
               </button>
             </div>
@@ -52,9 +88,16 @@ const Hero = () => {
               <div className="relative">
                 <div className="absolute inset-0 bg-cyan-500/20 blur-3xl rounded-full scale-110"></div>
                 <div className="relative">
-                  <img
+                  <motion.img
                     src={ProfilePic}
                     alt="Profile"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1, y: [0, -8, 0] }}
+                    transition={{
+                      opacity: { duration: 0.6 },
+                      scale: { duration: 0.6 },
+                      y: { repeat: Infinity, duration: 4 }
+                    }}
                     className="
                       w-[240px] h-[300px]
                       sm:w-[280px] sm:h-[350px]
@@ -72,8 +115,8 @@ const Hero = () => {
               </div>
             </div>
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 
