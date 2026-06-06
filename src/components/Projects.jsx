@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import {ArrowUpRight, ChevronLeft, ChevronRight,} from "lucide-react";
+import { motion } from "framer-motion";
 
 import sipindang from "../assets/img/sipindang.png";
 import SelulerKu from "../assets/img/SelulerKu.png";
@@ -189,11 +190,10 @@ const filteredProjects =
   };
 
   return (
-    <section id="project" className="relative overflow-hidden">
+    <motion.section id="project" className="relative overflow-hidden"
+      initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
       <div className="mx-auto px-8 sm:px-15 lg:px-10 2xl:px-20 mt-10">
-
-        {/* HEADER */}
-        <div>
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <p className="md:text-4xl text-3xl 2xl:text-7xl font-bold leading-tight text-cyan-400">
             My Projects
           </p>
@@ -202,22 +202,18 @@ const filteredProjects =
             Some projects that I have worked on in machine
             learning, data science, and front-end development.
           </p>
-        </div>
+        </motion.div>
 
         <div className="flex flex-wrap justify-center gap-3 mt-6 md:mt-8">
           {categories.map((category) => (
-            <button
+            <motion.button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`
-                px-4 py-2
-                rounded-full
-                text-xs md:text-sm 2xl:text-2xl
-                font-medium
-                border
-                transition-all
-                duration-300
-
+              key={category}
+              onClick={() => setActiveCategory(category)}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration:0.5 }}
+              className={`px-4 py-2 rounded-full text-xs md:text-sm 2xl:text-2xl font-medium border transition-allduration-300
                 ${
                   activeCategory === category
                     ? "bg-cyan-400 text-black border-cyan-400"
@@ -226,7 +222,7 @@ const filteredProjects =
               `}
             >
               {category}
-            </button>
+            </motion.button>
           ))}
         </div>
 
@@ -257,11 +253,18 @@ const filteredProjects =
             ref={sliderRef}
             className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide snap-x snap-mandatory px-14 md:px-16 md:mr-10 md:ml-10 py-3 mr-8 ml-8">
             {filteredProjects.map((project, index) => (
-              <a
+              <motion.a
                 key={index}
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1,
+                }}
                 className="project-card snap-start group
                   min-w-[248px]
                   md:min-w-[355px]
@@ -277,9 +280,11 @@ const filteredProjects =
               >
                 {/* IMAGE */}
                 <div className="overflow-hidden">
-                  <img
+                  <motion.img
                     src={project.image}
                     alt={project.title}
+                    whileHover={{ scale: 1.08 }}
+                    transition={{ duration: 0.5 }}
                     className="w-full h-30 md:h-50 2xl:h-65 object-cover group-hover:scale-105 transition duration-500"
                   />
                 </div>
@@ -318,12 +323,12 @@ const filteredProjects =
                     <ArrowUpRight size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition"/>
                   </div>
                 </div>
-              </a>
+              </motion.a>
             ))}
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

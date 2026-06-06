@@ -1,4 +1,6 @@
 import React, { useRef } from "react";
+import { motion } from "framer-motion";
+
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Intren from "../assets/img/intren-bpkad.jpeg";
 import GenBI from "../assets/img/genbi.jpg";
@@ -83,19 +85,19 @@ const Experiences = () => {
   };
 
   return (
-    <section id="experiences" className="relative overflow-hidden mt-3 md:mt-10">
+    <motion.section 
+      id="experiences" className="relative overflow-hidden mt-3 md:mt-10"
+      initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
       <div className="mx-auto px-8 sm:px-15 lg:px-10 2xl:px-20 mt-10">
-        
-        {/* HEADER */}
-        <div>
-          <h2 className="md:text-4xl text-3xl 2xl:text-7xl font-bold text-cyan-400">
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+          <p className="md:text-4xl text-3xl 2xl:text-7xl font-bold text-cyan-400">
             My Experience
-          </h2>
+          </p>
 
           <p className="mt-5 text-sm md:text-lg 2xl:text-3xl text-white max-w-2xl 2xl:max-w-4xl">
             My internship, research, and organizational experiences.
           </p>
-        </div>
+        </motion.div>
 
         <div className="relative mt-8">
 
@@ -122,11 +124,17 @@ const Experiences = () => {
           {/* SLIDER */}
           <div
             ref={sliderRef}
-            className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide snap-x snap-mandatory px-14 md:px-16 md:mr-10 md:ml-10 py-3 mr-8 ml-8"
-          >
+            className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide snap-x snap-mandatory px-14 md:px-16 md:mr-10 md:ml-10 py-3 mr-8 ml-8">
             {experiences.map((exp, index) => (
-              <div
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1,
+                }}
                 className="experience-card snap-start group flex flex-col md:flex-row
                 min-w-[248px] md:min-w-[560px] lg:min-w-[540px] 2xl:min-w-[830px]
                 max-w-[248px] md:max-w-[560px] lg:max-w-[540px] 2xl:min-w-[830px]
@@ -137,9 +145,11 @@ const Experiences = () => {
                 
                 {/* IMAGE LEFT */}
                 <div className="md:w-1/2 w-full h-35 md:h-auto overflow-hidden">
-                  <img
+                  <motion.img
                     src={exp.image}
                     alt={exp.position}
+                    whileHover={{ scale: 1.08 }}
+                    transition={{ duration: 0.5 }}
                     className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                   />
                 </div>
@@ -164,14 +174,12 @@ const Experiences = () => {
                     ))}
                   </ul>
                 </div>
-
-              </div>
+              </motion.div>
             ))}
           </div>
-
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

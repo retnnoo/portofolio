@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import {ChevronLeft,ChevronRight,ArrowUpRight,Award,} from "lucide-react";
+import { motion } from "framer-motion";
 
 const certificates = [
   {
@@ -62,18 +63,18 @@ const Certificates = () => {
   };
 
   return (
-    <section id="certificate" className="relative overflow-hidden mt-20">
+    <motion.section 
+      id="certificate" className="relative overflow-hidden mt-20"
+      initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
       <div className="mx-auto px-8 sm:px-15 lg:px-10 2xl:px-20">
-
-        {/* HEADER */}
-        <div>
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <p className="md:text-5xl text-3xl 2xl:text-7xl font-bold text-cyan-400">Certificates</p>
           <p className="mt-5 2xl:py-5 text-sm md:text-lg 2xl:text-3xl text-white max-w-2xl 2xl:max-w-4xl leading-relaxed">
             Certifications and courses that support my skills
             in software development, data science, and
             machine learning.
           </p>
-        </div>
+        </motion.div>
 
         <div className="relative mt-8">
           {/* LEFT BUTTON */}
@@ -132,13 +133,19 @@ const Certificates = () => {
             className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide snap-x snap-mandatory px-14 md:px-16 md:mr-10 md:ml-10 py-3 mr-8 ml-8"
           >
             {certificates.map((cert, index) => (
-              <a
+              <motion.a
                 key={index}
                 href={cert.link}
                 target="_blank"
                 rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1,
+                }}
                 className="certificate-card snap-start group
-
                   min-w-[248px]
                   md:min-w-[355px]
                   2xl:min-w-[530px]
@@ -164,12 +171,12 @@ const Certificates = () => {
                   View Certificate
                   <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition 2xl:w-7 xl:h-7 w-5 h-5"/>
                 </div>
-              </a>
+              </motion.a>
             ))}
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
