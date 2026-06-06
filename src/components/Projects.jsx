@@ -30,7 +30,7 @@ const projects = [
   {
     title: "Sistem Pendukung Keputusan Pemilihan Operator Seluler Terbaik",
     category: "Web Development",
-    role: "Front-End",
+    role: "Full-Stack",
     description:
       "Assists users in selecting the best mobile network operator by providing fast and accurate recommendations based on a decision-support method.",
     tech: ["Laravel", "Tailwind", "Javascript"],
@@ -199,21 +199,25 @@ const filteredProjects =
           </p>
 
           <p className="mt-5 2xl:py-5 text-sm md:text-lg 2xl:text-3xl text-white max-w-2xl 2xl:max-w-4xl leading-relaxed">
-            Some projects that I have worked on in machine
-            learning, data science, and front-end development.
+            Some projects I have worked on in front-end development, machine learning (data science & data analysis), artificial intelligence, and UI/graphic design.
           </p>
         </motion.div>
 
         <div className="flex flex-wrap justify-center gap-3 mt-6 md:mt-8">
-          {categories.map((category) => (
+          {categories.map((category, index) => (
             <motion.button
               key={category}
               onClick={() => setActiveCategory(category)}
-              key={category}
-              onClick={() => setActiveCategory(category)}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              transition={{ duration:0.5 }}
-              className={`px-4 py-2 rounded-full text-xs md:text-sm 2xl:text-2xl font-medium border transition-allduration-300
+              transition={{
+                duration: 0.4,
+                delay: index * 0.05,
+              }}
+              className={`px-4 py-2 rounded-full text-xs md:text-sm 2xl:text-2xl font-medium border transition-all duration-300
                 ${
                   activeCategory === category
                     ? "bg-cyan-400 text-black border-cyan-400"

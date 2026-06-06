@@ -67,7 +67,11 @@ const Certificates = () => {
       id="certificate" className="relative overflow-hidden mt-20"
       initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
       <div className="mx-auto px-8 sm:px-15 lg:px-10 2xl:px-20">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+        <motion.div 
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}>
           <p className="md:text-5xl text-3xl 2xl:text-7xl font-bold text-cyan-400">Certificates</p>
           <p className="mt-5 2xl:py-5 text-sm md:text-lg 2xl:text-3xl text-white max-w-2xl 2xl:max-w-4xl leading-relaxed">
             Certifications and courses that support my skills
