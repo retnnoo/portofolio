@@ -4,6 +4,25 @@ import { SiReact, SiPython, SiTailwindcss, SiJavascript, SiMysql, SiCanva, SiLar
 import { motion } from "framer-motion";
 
 const Skills = () => {
+
+  const skillIconTech = `
+    w-10 h-10 md:w-12 md:h-12 2xl:w-16 2xl:h-16
+    bg-white rounded-2xl flex items-center justify-center text-3xl
+    duration-300 ease-out hover:scale-110 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(34,211,238,0.5)]
+  `;
+
+  const serviceItemClass =
+    "group flex items-center gap-3 2xl:gap-5 transition-all duration-300"
+  ;
+
+  const serviceIconClass =
+    "w-12 h-12 2xl:w-18 2xl:h-18 rounded-full bg-cyan-400 text-black flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(34,211,238,0.5)]"
+  ;
+
+  const serviceTextClass =
+    "md:text-2xl 2xl:text-3xl text-base font-medium text-white transition-all duration-300 group-hover:text-cyan-300"
+  ;
+
   return (
     <motion.section id="skills" 
       className="relative overflow-hidden mt-5 mb-5"
@@ -43,73 +62,72 @@ const Skills = () => {
               >
 
               <motion.div
-                className="w-10 h-10 md:w-12 md:h-12 2xl:w-16 2xl:h-16 bg-white rounded-2xl shadow-md flex items-center justify-center text-3xl"
+                className={skillIconTech}
                 variants={{hidden: { opacity: 0, scale: 0.8 }, show: { opacity: 1, scale: 1 },}}
               >
                 <SiTailwindcss />
               </motion.div>
               <motion.div
-                className="w-10 h-10 md:w-12 md:h-12 2xl:w-16 2xl:h-16 bg-white rounded-2xl shadow-md flex items-center justify-center text-3xl"
+                className={skillIconTech}
                 variants={{hidden: { opacity: 0, scale: 0.8 }, show: { opacity: 1, scale: 1 },}}
               >
                 <SiJavascript />
               </motion.div>
               <motion.div
-                className="w-10 h-10 md:w-12 md:h-12 2xl:w-16 2xl:h-16 bg-white rounded-2xl shadow-md flex items-center justify-center text-3xl"
+                className={skillIconTech}
                 variants={{hidden: { opacity: 0, scale: 0.8 }, show: { opacity: 1, scale: 1 },}}
               >
                 <SiPhp />
               </motion.div>
               <motion.div
-                className="w-10 h-10 md:w-12 md:h-12 2xl:w-16 2xl:h-16 bg-white rounded-2xl shadow-md flex items-center justify-center text-3xl"
+                className={skillIconTech}
                 variants={{hidden: { opacity: 0, scale: 0.8 }, show: { opacity: 1, scale: 1 },}}
               >
                 <SiReact />
               </motion.div>
               <motion.div
-                className="w-10 h-10 md:w-12 md:h-12 2xl:w-16 2xl:h-16 bg-white rounded-2xl shadow-md flex items-center justify-center text-3xl"
+                className={skillIconTech}
                 variants={{hidden: { opacity: 0, scale: 0.8 }, show: { opacity: 1, scale: 1 },}}
               >
                 <SiLaravel />
               </motion.div>
               <motion.div
-                className="w-10 h-10 md:w-12 md:h-12 2xl:w-16 2xl:h-16 bg-white rounded-2xl shadow-md flex items-center justify-center text-3xl"
-                variants={{hidden: { opacity: 0, scale: 0.8 }, show: { opacity: 1, scale: 1 },}}
+                className={skillIconTech}
               >
                 <SiPython />
               </motion.div>
               <motion.div
-                className="w-10 h-10 md:w-12 md:h-12 2xl:w-16 2xl:h-16 bg-white rounded-2xl shadow-md flex items-center justify-center text-3xl"
+                className={skillIconTech}
                 variants={{hidden: { opacity: 0, scale: 0.8 }, show: { opacity: 1, scale: 1 },}}
               >
                 <SiLaragon />
               </motion.div>
               <motion.div
-                className="w-10 h-10 md:w-12 md:h-12 2xl:w-16 2xl:h-16 bg-white rounded-2xl shadow-md flex items-center justify-center text-3xl"
+                className={skillIconTech}
                 variants={{hidden: { opacity: 0, scale: 0.8 }, show: { opacity: 1, scale: 1 },}}
               >
                 <SiMysql />
               </motion.div>
               <motion.div
-                className="w-10 h-10 md:w-12 md:h-12 2xl:w-16 2xl:h-16 bg-white rounded-2xl shadow-md flex items-center justify-center text-3xl"
+                className={skillIconTech}
                 variants={{hidden: { opacity: 0, scale: 0.8 }, show: { opacity: 1, scale: 1 },}}
               >
                 <SiCanva />
               </motion.div>
               <motion.div
-                className="w-10 h-10 md:w-12 md:h-12 2xl:w-16 2xl:h-16 bg-white rounded-2xl shadow-md flex items-center justify-center text-3xl"
+                className={skillIconTech}
                 variants={{hidden: { opacity: 0, scale: 0.8 }, show: { opacity: 1, scale: 1 },}}
               >
                 <SiFigma />
               </motion.div>
               <motion.div
-                className="w-10 h-10 md:w-12 md:h-12 2xl:w-16 2xl:h-16 bg-white rounded-2xl shadow-md flex items-center justify-center text-3xl"
+                className={skillIconTech}
                 variants={{hidden: { opacity: 0, scale: 0.8 }, show: { opacity: 1, scale: 1 },}}
               >
                 <SiClaude />
               </motion.div>
               <motion.div
-                className="w-10 h-10 md:w-12 md:h-12 2xl:w-16 2xl:h-16 bg-white rounded-2xl shadow-md flex items-center justify-center text-3xl"
+                className={skillIconTech}
                 variants={{hidden: { opacity: 0, scale: 0.8 }, show: { opacity: 1, scale: 1 },}}
               >
                 <SiGithub />
@@ -119,67 +137,66 @@ const Skills = () => {
         </div>
 
         {/* RIGHT SIDE */}
-        <motion.div className="space-y-6 2xl:space-y-8"
-             initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 1 }}>
-          <div className="flex items-center gap-3 2xl:gap-5">
-            <div className="w-12 h-12 2xl:w-18 2xl:h-18 rounded-full bg-cyan-400 text-black flex items-center justify-center">
+        <motion.div className="space-y-6 2xl:space-y-8 mt-5 mb-5" initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 1 }}>
+          <div className={serviceItemClass}>
+            <div className={serviceIconClass}>
               <ChartBar className="w-7 h-7 2xl:w-10 2xl:h-10" />
             </div>
-            <p className="md:text-2xl 2xl:text-3xl text-base font-medium text-white">
+            <p className={serviceTextClass}>
               Data Analysis & Visualization
             </p>
           </div>
 
-          <div className="flex items-center gap-3 2xl:gap-5">
-            <div className="w-12 h-12 2xl:w-18 2xl:h-18 rounded-full bg-cyan-400 text-black flex items-center justify-center">
+          <div className={serviceItemClass}>
+            <div className={serviceIconClass}>
               <BrainCircuit className="w-7 h-7 2xl:w-10 2xl:h-10" />
             </div>
-            <p className="md:text-2xl 2xl:text-3xl text-base font-medium text-white">
+            <p className={serviceTextClass}>
               Machine Learning
             </p>
           </div>
 
-          <div className="flex items-center gap-3 2xl:gap-5">
-            <div className="w-12 h-12 2xl:w-18 2xl:h-18 rounded-full bg-cyan-400 text-black flex items-center justify-center">
+          <div className={serviceItemClass}>
+            <div className={serviceIconClass}>
               <FolderCode className="w-7 h-7 2xl:w-10 2xl:h-10" />
             </div>
-            <p className="md:text-2xl 2xl:text-3xl text-base font-medium text-white">
+            <p className={serviceTextClass}>
               Front-End Development
             </p>
           </div>
 
-          <div className="flex items-center gap-3 2xl:gap-5">
-            <div className="w-12 h-12 2xl:w-18 2xl:h-18 rounded-full bg-cyan-400 text-black flex items-center justify-center">
+          <div className={serviceItemClass}>
+            <div className={serviceIconClass}>
               <Wallpaper className="w-7 h-7 2xl:w-10 2xl:h-10" />
             </div>
-            <p className="md:text-2xl 2xl:text-3xl text-base font-medium text-white">
+            <p className={serviceTextClass}>
               UI Design
             </p>
           </div>
 
-          <div className="flex items-center gap-3 2xl:gap-5">
-            <div className="w-12 h-12 2xl:w-18 2xl:h-18 rounded-full bg-cyan-400 text-black flex items-center justify-center">
+          <div className={serviceItemClass}>
+            <div className={serviceIconClass}>
               <WandSparkles className="w-7 h-7 2xl:w-10 2xl:h-10" />
             </div>
-            <p className="md:text-2xl 2xl:text-3xl text-base font-medium text-white">
+            <p className={serviceTextClass}>
               Graphic Design
             </p>
           </div>
 
-          <div className="flex items-center gap-3 2xl:gap-5">
-            <div className="w-12 h-12 2xl:w-18 2xl:h-18 rounded-full bg-cyan-400 text-black flex items-center justify-center">
+          <div className={serviceItemClass}>
+            <div className={serviceIconClass}>
               <Database className="w-7 h-7 2xl:w-10 2xl:h-10" />
             </div>
-            <p className="md:text-2xl 2xl:text-3xl text-base font-medium text-white">
+            <p className={serviceTextClass}>
               Database Management
             </p>
           </div>
 
-          <div className="flex items-center gap-3 2xl:gap-5">
-            <div className="w-12 h-12 2xl:w-18 2xl:h-18 rounded-full bg-cyan-400 text-black flex items-center justify-center">
+          <div className={serviceItemClass}>
+            <div className={serviceIconClass}>
               <BookHeart className="w-7 h-7 2xl:w-10 2xl:h-10" />
             </div>
-            <p className="md:text-2xl 2xl:text-3xl text-base font-medium text-white">
+            <p className={serviceTextClass}>
               Social Media Management
             </p>
           </div>

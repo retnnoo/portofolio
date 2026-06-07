@@ -48,7 +48,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="relative overflow-hidden py-20">
+    <section id="contact" className="relative overflow-hidden py-15">
       <div className="mx-auto px-8 sm:px-15 lg:px-10 2xl:px-20">
         {/* HEADER */}
         <motion.div className="max-w-3xl"

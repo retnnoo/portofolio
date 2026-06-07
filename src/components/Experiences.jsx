@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Intren from "../assets/img/intren-bpkad.jpeg";
 import GenBI from "../assets/img/genbi.jpg";
 import Dpm from "../assets/img/dpm.png";
+import Bem from "../assets/img/bem.png";
 
 const experiences = [
   {
@@ -57,7 +58,7 @@ const experiences = [
       "Coordinated with design team for visual preparation.",
       "Supported event documentation and organizational activities.",
     ],
-    image: Intren,
+    image: Bem,
   },
 ];
 
@@ -95,7 +96,7 @@ const Experiences = () => {
           </p>
 
           <p className="mt-5 text-sm md:text-lg 2xl:text-3xl text-white max-w-2xl 2xl:max-w-4xl">
-            My internship, research, and organizational experiences.
+            Experiences from internships, scholarship programs, and organizational activities that have contributed to my personal, academic, and professional growth.
           </p>
         </motion.div>
 

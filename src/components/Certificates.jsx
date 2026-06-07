@@ -74,9 +74,7 @@ const Certificates = () => {
           transition={{ duration: 0.8 }}>
           <p className="md:text-5xl text-3xl 2xl:text-7xl font-bold text-cyan-400">Certificates</p>
           <p className="mt-5 2xl:py-5 text-sm md:text-lg 2xl:text-3xl text-white max-w-2xl 2xl:max-w-4xl leading-relaxed">
-            Certifications and courses that support my skills
-            in software development, data science, and
-            machine learning.
+            Certifications and courses that support my career development and continuous learning in technology, data, networking, and digital fields.
           </p>
         </motion.div>
 
@@ -158,7 +156,7 @@ const Certificates = () => {
                   md:max-w-[355px]
                   2xl:max-w-[530px]
 
-                  overflow-hidden bg-white/5 backdrop-blur-md border p-5 2xl:p-10 border-white/20 rounded-3xl transition-all duration-300
+                  overflow-hidden bg-white/5 backdrop-blur-md border mb-5 p-5 2xl:p-10 border-white/20 rounded-3xl transition-all duration-300
                   hover:-translate-y-2 hover:border-cyan-400/50 hover:shadow-[0_0_40px_rgba(34,211,238,0.15)]
                 "
               >
